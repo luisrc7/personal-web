@@ -3,6 +3,15 @@ body {
   background-color: #F4F7F7;
   color: #1F4E5F; }
 
+ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  padding: 0; }
+
 #profile-img {
   -moz-border-radius: 25%;
   -webkit-border-radius: 25%;
@@ -37,14 +46,6 @@ body {
   float: left;
   width: 100%; }
 
-ul {
-  list-style-type: none;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0; }
-
 .panel-default > .panel-heading {
   background-color: #1F4E5F;
   color: #F4F7F7; }
@@ -52,7 +53,8 @@ ul {
 .panel.contact ul li {
   background-repeat: no-repeat;
   background-position: 0;
-  padding-left: 25px; }
+  padding-left: 25px;
+  margin-bottom: 10px; }
   .panel.contact ul li.contact-location {
     background-image: url(../img/location-16.png); }
   .panel.contact ul li.contact-email {
@@ -83,13 +85,15 @@ a.dwnl {
   background-image: url(../img/chat-4-16.png);
   background-repeat: no-repeat;
   background-position: 0;
-  padding-left: 25px; }
+  padding-left: 25px;
+  margin-bottom: 10px; }
 
 .panel.posts .blog-item {
   background-image: url(../img/blog-search-16.png);
   background-repeat: no-repeat;
   background-position: 0;
-  padding-left: 25px; }
+  padding-left: 25px;
+  margin-bottom: 10px; }
 
 .content-main-item.experience .experience-title {
   font-size: 16px;
