@@ -1,5 +1,20 @@
+## EXPIRES CACHING ##
 #Add cache control to page
 Header set Cache-Control "max-age=86400, public"
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+#ExpiresByType text/css "access plus 1 month"
+#ExpiresByType application/pdf "access plus 1 month"
+#ExpiresByType text/x-javascript "access plus 1 month"
+#ExpiresByType application/x-shockwave-flash "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+## EXPIRES CACHING ##
 
 <IfModule mod_rewrite.c>
   RewriteEngine on
@@ -11,7 +26,9 @@ Header set Cache-Control "max-age=86400, public"
   RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
   # Redirect all to https:
-  RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.
