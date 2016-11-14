@@ -157,5 +157,8 @@ a.dwnl {
     width: 100%;
     float: left; }
 
+.content-sidebar .panel.other .panel-body > div, .content-sidebar .panel.languages .panel-body > div {
+  margin-bottom: 5px; }
+
 .content-sidebar .download p {
   text-align: right; }

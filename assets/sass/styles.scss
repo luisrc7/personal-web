@@ -200,6 +200,7 @@ a.dwnl {
         margin-bottom: 10px;
       }
     }
+
     &.presentations {
       .presentation-item {
         float: left;
@@ -213,6 +214,11 @@ a.dwnl {
           width: 100%;
           float: left;
         }
+      }
+    }
+    &.other, &.languages {
+      & .panel-body > div {
+        margin-bottom: 5px;
       }
     }
   }
