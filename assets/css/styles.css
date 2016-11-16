@@ -111,6 +111,8 @@ a.dwnl {
   margin-bottom: 10px; }
   .content-sidebar .panel.contact ul li.contact-location {
     background-image: url(../img/location-16.png); }
+  .content-sidebar .panel.contact ul li.contact-age {
+    background-image: url(../img/birthday-cake-16.png); }
   .content-sidebar .panel.contact ul li.contact-email {
     background-image: url(../img/email-16.png); }
   .content-sidebar .panel.contact ul li.contact-web {
