@@ -9,7 +9,7 @@ var source = require('vinyl-source-stream');
 var request = require('request');
 var merge = require('merge2');
 var buffer = require('gulp-buffer');
-
+var gzip = require('gulp-gzip');
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
@@ -37,6 +37,7 @@ gulp.task('styles', ['sass'], function() {
     .pipe(gulp.dest('./css'))
     .pipe(rename('all.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gzip())
     .pipe(gulp.dest('./css'));
 });
 
@@ -56,6 +57,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./js'))
     .pipe(rename('all.min.js'))
     .pipe(uglify())
+    .pipe(gzip())
     .pipe(gulp.dest('./js'));
 });
 
