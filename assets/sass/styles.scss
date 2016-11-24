@@ -1,0 +1,233 @@
+
+//Basic config
+$white-background: #FFFFFF;
+$body-background: #F4F7F7;
+$header-background: #4D727E;
+$sidebar-headers: #1F4E5F;
+$skills-background: #e8e8e8;
+$skills-filling: #66cb8c;
+$brown-elements: #630A10;
+
+// Mixings
+@mixin simple-border-radius($number) {
+  -moz-border-radius: $number;
+  -webkit-border-radius: $number;
+  border-radius: $number;
+}
+
+@mixin title-element($font, $margin-bottom, $display){
+  font-size: $font;
+  font-weight: bold;
+  margin-bottom: $margin-bottom;
+  display: $display;
+}
+
+@mixin time-element($color){
+  color: $color;
+  font-style: italic;
+}
+
+/*** Common Elements ***/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $body-background;
+  color: $sidebar-headers;
+}
+
+ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  padding: 0; // Reset padding
+}
+
+a.dwnl {
+  background-image: url(../img/download-2-16.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  padding-left: 20px;
+  .education-content & {
+    font-size: 0.90em;
+    margin-bottom: 15px;
+    display: block;
+  }
+}
+
+/*** Header ***/
+
+#profile-img {
+  @include simple-border-radius(25%);
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron {
+  overflow: hidden;
+  padding-left: 15px;
+  background-color: $header-background;
+  color: $body-background;
+}
+
+/*** Main Content ***/
+
+.content-main-item {
+  @include simple-border-radius(15px);
+  background-color: $white-background;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.content-main-item {
+
+  &.experience {
+    .experience-title {
+      @include title-element(16px, 10px, inline-block);
+    }
+    .experience-location {
+      color: $brown-elements;
+    }
+    .experience-time {
+      @include time-element($brown-elements);
+    }
+    .experience-content {
+      padding: 10px;
+    }
+  }
+
+  &.education {
+    .education-item {
+      .education-title {
+        @include title-element(16px, 10px, inline-block);
+      }
+      &.course {
+        .education-title {
+          @include title-element(14px, 5px, inline-block);
+        }
+      }
+      .education-location, .education-type {
+        color: $brown-elements;
+      }
+      .education-time {
+        @include time-element($brown-elements);
+      }
+      .education-content {
+        padding: 10px;
+      }
+    }
+  }
+
+  &.projects {
+    & > div {
+      margin-bottom: 10px;
+    }
+    .project-item {
+      .project-title {
+        @include title-element(16px, 0, inline-block);
+      }
+      .project-tech {
+        @include time-element($brown-elements);
+      }
+    }
+  }
+
+}
+
+/*** Sidebar ***/
+.content-sidebar {
+  .panel-default > .panel-heading {
+    background-color: $sidebar-headers;
+    color: $body-background;
+  }
+  .panel {
+    &.contact {
+      ul {
+        li {
+          background-repeat: no-repeat;
+          background-position: 0;
+          padding-left: 25px;
+          margin-bottom: 10px;
+          &.contact-location {
+            background-image: url(../img/location-16.png);
+          }
+          &.contact-age {
+            background-image: url(../img/birthday-cake-16.png);
+          }
+          &.contact-email {
+            background-image: url(../img/email-16.png);
+          }
+          &.contact-web {
+            background-image: url(../img/globe-16.png);
+          }
+          &.contact-linkedin {
+            background-image: url(../img/linkedin-16.png);
+          }
+          &.contact-twitter {
+            background-image: url(../img/twitter.png);
+          }
+          &.contact-github {
+            background-image: url(../img/github-6-16.png);
+          }
+        }
+      }
+    }
+    &.skills {
+      .level-bar {
+        height: 15px;
+        background: $skills-background;
+      }
+      .level-bar-inner {
+        height: 15px;
+        background: $skills-filling;
+      }
+      .skill-level {
+        float: right;
+      }
+      .skill-item {
+        font-size: 13px;
+      }
+    }
+    &.posts {
+      .blog-item {
+        float: left;
+        width: 100%;
+        background-image: url(../img/blog-search-16.png);
+        background-repeat: no-repeat;
+        background-position: 0;
+        padding-left: 25px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &.presentations {
+      .presentation-item {
+        float: left;
+        width: 100%;
+        background-image: url(../img/chat-4-16.png);
+        background-repeat: no-repeat;
+        background-position: 0;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        a.presentation-link {
+          width: 100%;
+          float: left;
+        }
+      }
+    }
+    &.other, &.languages {
+      & .panel-body > div {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .download {
+    p {
+      text-align: right;
+    }
+  }
+}

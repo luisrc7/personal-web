@@ -1,0 +1,166 @@
+/*** Common Elements ***/
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F4F7F7;
+  color: #1F4E5F; }
+
+ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  padding: 0; }
+
+a.dwnl {
+  background-image: url(../img/download-2-16.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  padding-left: 20px; }
+  .education-content a.dwnl {
+    font-size: 0.90em;
+    margin-bottom: 15px;
+    display: block; }
+
+/*** Header ***/
+#profile-img {
+  -moz-border-radius: 25%;
+  -webkit-border-radius: 25%;
+  border-radius: 25%;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.jumbotron {
+  overflow: hidden;
+  padding-left: 15px;
+  background-color: #4D727E;
+  color: #F4F7F7; }
+
+/*** Main Content ***/
+.content-main-item {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  margin-bottom: 20px; }
+
+.content-main-item.experience .experience-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block; }
+
+.content-main-item.experience .experience-location {
+  color: #630A10; }
+
+.content-main-item.experience .experience-time {
+  color: #630A10;
+  font-style: italic; }
+
+.content-main-item.experience .experience-content {
+  padding: 10px; }
+
+.content-main-item.education .education-item .education-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block; }
+
+.content-main-item.education .education-item.course .education-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block; }
+
+.content-main-item.education .education-item .education-location, .content-main-item.education .education-item .education-type {
+  color: #630A10; }
+
+.content-main-item.education .education-item .education-time {
+  color: #630A10;
+  font-style: italic; }
+
+.content-main-item.education .education-item .education-content {
+  padding: 10px; }
+
+.content-main-item.projects > div {
+  margin-bottom: 10px; }
+
+.content-main-item.projects .project-item .project-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: inline-block; }
+
+.content-main-item.projects .project-item .project-tech {
+  color: #630A10;
+  font-style: italic; }
+
+/*** Sidebar ***/
+.content-sidebar .panel-default > .panel-heading {
+  background-color: #1F4E5F;
+  color: #F4F7F7; }
+
+.content-sidebar .panel.contact ul li {
+  background-repeat: no-repeat;
+  background-position: 0;
+  padding-left: 25px;
+  margin-bottom: 10px; }
+  .content-sidebar .panel.contact ul li.contact-location {
+    background-image: url(../img/location-16.png); }
+  .content-sidebar .panel.contact ul li.contact-age {
+    background-image: url(../img/birthday-cake-16.png); }
+  .content-sidebar .panel.contact ul li.contact-email {
+    background-image: url(../img/email-16.png); }
+  .content-sidebar .panel.contact ul li.contact-web {
+    background-image: url(../img/globe-16.png); }
+  .content-sidebar .panel.contact ul li.contact-linkedin {
+    background-image: url(../img/linkedin-16.png); }
+  .content-sidebar .panel.contact ul li.contact-twitter {
+    background-image: url(../img/twitter.png); }
+  .content-sidebar .panel.contact ul li.contact-github {
+    background-image: url(../img/github-6-16.png); }
+
+.content-sidebar .panel.skills .level-bar {
+  height: 15px;
+  background: #e8e8e8; }
+
+.content-sidebar .panel.skills .level-bar-inner {
+  height: 15px;
+  background: #66cb8c; }
+
+.content-sidebar .panel.skills .skill-level {
+  float: right; }
+
+.content-sidebar .panel.skills .skill-item {
+  font-size: 13px; }
+
+.content-sidebar .panel.posts .blog-item {
+  float: left;
+  width: 100%;
+  background-image: url(../img/blog-search-16.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  padding-left: 25px;
+  margin-bottom: 10px; }
+
+.content-sidebar .panel.presentations .presentation-item {
+  float: left;
+  width: 100%;
+  background-image: url(../img/chat-4-16.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  padding-left: 25px;
+  margin-bottom: 10px; }
+  .content-sidebar .panel.presentations .presentation-item a.presentation-link {
+    width: 100%;
+    float: left; }
+
+.content-sidebar .panel.other .panel-body > div, .content-sidebar .panel.languages .panel-body > div {
+  margin-bottom: 5px; }
+
+.content-sidebar .download p {
+  text-align: right; }
